@@ -52,3 +52,6 @@ aux_source_directory(${CMAKE_SOURCE_DIR}/test/benchmark BENCHMARK_FILES)
 add_executable(benchmark-ug-lib ${BENCHMARK_FILES})
 target_include_directories(benchmark-ug-lib PRIVATE ${UG_SRC_DIR})
 target_link_libraries(benchmark-ug-lib PRIVATE benchmark::benchmark benchmark::benchmark_main ug-lib)
+
+aux_source_directory(${CMAKE_SOURCE_DIR}/tools TOOLS_FILES)
+add_executable(ug-lib-tools ${TOOLS_FILES})
